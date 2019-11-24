@@ -15,4 +15,11 @@ RUN . /virtualenvs/perceptron/bin/activate && \
 ## Project installs
 WORKDIR /deep_learning_env
 
+# keras-mlp install
+WORKDIR /deep_learning_env/keras-mlp
+ADD keras-mlp/requirements.txt /deep_learning_env/keras-mlp/
+RUN python3 -m venv /virtualenvs/keras-mlp
+RUN . /virtualenvs/keras-mlp/bin/activate && \
+    pip3 install -r requirements.txt
+
 CMD bash
