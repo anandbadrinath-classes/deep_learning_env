@@ -22,4 +22,6 @@ RUN python3 -m venv /virtualenvs/keras-mlp
 RUN . /virtualenvs/keras-mlp/bin/activate && \
     pip3 install -r requirements.txt
 
+WORKDIR /deep_learning_env
+
 CMD bash
